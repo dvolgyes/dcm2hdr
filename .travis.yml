@@ -29,8 +29,8 @@ install:
 
 script:
   - make ci-test
+  - make test
 
 after_success:
   - coveralls
-  - coveralls debug
   - codecov
