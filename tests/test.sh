@@ -18,10 +18,10 @@ for file in *dcm; do
     echo $file
     output=${file/dcm/png}
     echo "Convert: $output to PNG"
-    $PYTHON ../src/dcm2hdr.py $file $output
+    $PYTHON $DIR/../src/dcm2hdr.py $file $output
     output=${file/dcm/tiff}
     echo "Convert: output to TIFF"
-    $PYTHON ../src/dcm2hdr.py $file $output
+    $PYTHON $DIR/../src/dcm2hdr.py $file $output
     echo "$output is done."
 done
 rm -f *.png *.tiff *.dcm
