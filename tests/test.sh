@@ -31,9 +31,12 @@ for file in *dcm; do
   echo "$output is done."
 done
 
+$PYTHON $DIR/../src/dcm2hdr.py $file invalid.jpg && false || true
+$PYTHON $DIR/../src/dcm2hdr.py $DIR/../src/dcm2hdr.py invalid.jpg && false || true
+
 $PYTHON $DIR/../src/dcm2hdr.py $file $output -R
 $PYTHON $DIR/../src/dcm2hdr.py $file $output -R -m -1000 -M 2000
-$PYTHON $DIR/../src/dcm2hdr.py $file $output -R -S -r 2 --offset -1000
+$PYTHON $DIR/../src/dcm2hdr.py $file $output -R -S -r 0.3 --offset -1000
 $PYTHON $DIR/../src/dcm2hdr.py $file $output  -z 0 -s
 
 rm -f *.png *.tiff *.dcm
