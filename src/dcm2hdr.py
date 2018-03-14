@@ -76,13 +76,13 @@ def save_hdr(filename, img, dimension=None):
         name, ext = os.path.splitext(filename)
         if dimension is None:
             # smallest:
-            if min(img.shape)<20:
+            if min(img.shape) < 20:
                 dimension = np.argmin(img.shape)
             # if NxNxM -> M
-            elif img.shape[0]==img.shape[1]:
+            elif img.shape[0] == img.shape[1]:
                 dimension = 2
             # if NxMxM -> N
-            elif img.shape[1]==img.shape[2]:
+            elif img.shape[1] == img.shape[2]:
                 dimension = 0
             # if nothing works, use default 0
             else:
@@ -173,7 +173,6 @@ if __name__ == "__main__":
     if len(args) == 0:
         parser.print_help()
         sys.exit(0)
-
 
     if len(args) != 2:
         print("Exactly two input files are needed: HDR and LDR.")
