@@ -27,7 +27,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install coveralls coverage
+            pip install coveralls coverage codecov
             pip install -r requirements.txt
             pip install git+https://github.com/dvolgyes/dcm2hdr
 
@@ -47,7 +47,7 @@ jobs:
             . venv/bin/activate
             make test
             make ci-test
-            codecov
+            python -m codecov
 
       - store_artifacts:
           path: test-reports
