@@ -35,7 +35,7 @@ def read_dicom(dcmfile, options):
         dcm.decompress()
         data = dcm.pixel_array
     except AttributeError:
-        eprint("DICOM file seems to be incorrect, but conversion is tried anyway.")
+        eprint("DICOM file seems to be incorrect, but try it anyway.")
         dcm.file_meta.TransferSyntaxUID = dicom.uid.ImplicitVRLittleEndian
         dcm.decompress()
         data = dcm.pixel_array
@@ -166,7 +166,7 @@ if __name__ == "__main__":
                       type="int",
                       default=None,
                       help="which dimension should be used"
-                           "for slicing (3D) (default:non-rectangular/smallest)")
+                           "for slicing (3D) (default:auto detect)")
 
     (options, args) = parser.parse_args()
 
