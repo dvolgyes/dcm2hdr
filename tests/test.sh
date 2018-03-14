@@ -7,14 +7,19 @@ set -e
 #
 wget -c -i example_dicom_files.url -nv
 
+PYTHON=python -m coverage run -a --source ../src
+
 for file in *dcm; do
     echo $file
     output=${file/dcm/png}
     echo "Convert: $output to PNG"
-    python ../src/dcm2hdr.py $file $output
+    $PYTHON ../src/dcm2hdr.py $file $output
     output=${file/dcm/tiff}
     echo "$Convert: output to TIFF"
-    python ../src/dcm2hdr.py $file $output
+    $PYTHON ../src/dcm2hdr.py $file $output
     echo "$output is done."
 done
 rm -f *.png *.tiff *.dcm
+
+$PYTHON python ../src/dcm2hdr.py
+$PYTHON python ../src/dcm2hdr.py -h

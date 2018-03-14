@@ -171,7 +171,9 @@ if __name__ == "__main__":
     (options, args) = parser.parse_args()
 
     if len(args) == 0:
-        parser.print
+        parser.print_help()
+        sys.exit(0)
+
 
     if len(args) != 2:
         print("Exactly two input files are needed: HDR and LDR.")
