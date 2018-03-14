@@ -28,8 +28,9 @@ install:
     - pip${PYVERSION} install git+https://github.com/dvolgyes/dcm2hdr
 
 script:
-  - make test
+  - make ci-test
 
 after_success:
   - coveralls
+  - coveralls debug
   - codecov

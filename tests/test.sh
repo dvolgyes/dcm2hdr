@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
+DIR=$(dirname "$0")
 
-PYTHON="python -m coverage run -a --source ../src"
-$PYTHON ../src/dcm2hdr.py
-$PYTHON ../src/dcm2hdr.py -h
+PYTHON="python -m coverage run -a --source $DIR/../src/"
+$PYTHON $DIR/../src/dcm2hdr.py
+$PYTHON $DIR/../src/dcm2hdr.py -h
 
 #
 # Test dicom files are downloaded from: http://deanvaughan.org/wordpress/2013/07/dicom-sample-images/
@@ -11,7 +12,7 @@ $PYTHON ../src/dcm2hdr.py -h
 # Dean Vaughan, http://deanvaughan.org/
 #
 
-wget -c -i example_dicom_files.url -nv
+wget -c -i ${DIR}/example_dicom_files.url -nv
 
 for file in *dcm; do
     echo $file
