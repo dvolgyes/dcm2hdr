@@ -1,0 +1,41 @@
+language: python
+
+matrix:
+    fast_finish: true
+    include:
+        - os: linux
+          dist: trusty
+          sudo: required
+          python: 3.5
+          env: PYVERSION="3"
+        - os: linux
+          dist: trusty
+          sudo: required
+          python: 3.6
+          env: PYVERSION="3"
+
+        - os: linux
+          dist: trusty
+          sudo: required
+          python: 2.7
+          env: PYVERSION="2"
+
+install:
+    - pip${PYVERSION} install --upgrade pip setuptools wheel
+    - pip${PYVERSION} install coveralls codecov pyflakes
+    - pip${PYVERSION} install --only-binary=numpy
+    - pip${PYVERSION} install -r requirements.txt
+    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    - chmod +x ./cc-test-reporter
+    - pip${PYVERSION} install git+https://github.com/dvolgyes/dcm2hdr
+
+before_script:
+  - ./cc-test-reporter before-build
+
+script:
+  - make test
+
+after_success:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - coveralls
+  - codecov
