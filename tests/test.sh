@@ -13,6 +13,6 @@ for file in *dcm; do
     output=${file/dcm/png}
     python ../src/dcm2hdr.py $file $output
     output=${file/dcm/tiff}
-    ../src/dcm2hdr.py $file $output
+    python ../src/dcm2hdr.py $file $output
 done
 rm -f *.png *.tiff *.dcm
