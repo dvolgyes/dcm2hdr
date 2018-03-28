@@ -27,8 +27,10 @@ install:
     - "activate test"
     - "%CMD_IN_ENV% pip install -r requirements.txt"
     - "%CMD_IN_ENV% pip install git+https://github.com/dvolgyes/dcm2hdr"
+    - choco install wget
 
 build: off
 
 test_script:
-  - "%CMD_IN_ENV%" src/dcm2hrd.py -h
+  - "%CMD_IN_ENV%" python src/dcm2hrd.py -h
+  - tests/win-test.bat
