@@ -8,7 +8,9 @@ Coveralls: [![Coverage Status](https://img.shields.io/coveralls/github/dvolgyes/
 Codecov: [![codecov](https://codecov.io/gh/dvolgyes/dcm2hdr/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/dcm2hdr)
 
 This is a Python2/3 converter tool which converts DICOM files to 16 bit PNG and TIFF files.
-The PNG files are grayscale, the TIFFs are RGB encoded gray files (all channels have the same value).
+The aim is to make it easier editing files with regular photo editor tools, e.g. for presentation.
+The PNG files are single channel grayscale files, 
+the TIFFs are RGB encoded gray files (all channels have the same value).
 
 Install
 -------
