@@ -47,5 +47,4 @@ The tool itself is simple, the help message is reasonable:
 dcm2hdr.py -h
 ```
 
-but if you need more, open a github ticket and explain what is missing
-
+but if you need more, open a github ticket and explain what is missing.
