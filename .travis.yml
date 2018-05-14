@@ -23,7 +23,7 @@ matrix:
 install:
     - pip${PYVERSION} install --upgrade pip setuptools wheel
     - pip${PYVERSION} install coveralls codecov pyflakes
-    - pip${PYVERSION} install --only-binary=numpy
+    - pip${PYVERSION} install --only-binary=numpy numpy
     - pip${PYVERSION} install -r requirements.txt
     - pip${PYVERSION} install git+https://github.com/dvolgyes/dcm2hdr
 
