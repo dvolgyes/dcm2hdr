@@ -19,19 +19,8 @@ However, 16bit seems to be enough, and these formats are more complicated than T
 If you need Radiance HDR/OpenEXR, and 16bit png is not enough, then open a ticket, and let me know.
 
 
-The software is kind of trivial, you don't have to cite it, but if you want, then you could use this DOI: 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246665.svg)](https://doi.org/10.5281/zenodo.1246665)
-
-@misc{DVolgyes2018,
-  author = {David Völgyes},
-  title = {DCM2HDR},
-  year = {2018},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/dvolgyes/dcm2hdr/}},
-  commit = {0bdb7627ab2c793cb51fb7c117a98ab7ecbf6c47},
-  doi = {10.5281/zenodo.1246665}
-}
+The software is kind of trivial, you don't have to cite it, but if you want, then you could use this:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
 
 
 Install
