@@ -1,16 +1,19 @@
 DCM2HDR: DICOM to HDR converter
 ===============================
-Travis CI: [![Build Status](https://travis-ci.org/dvolgyes/dcm2hdr.svg?branch=master)](https://travis-ci.org/dvolgyes/dcm2hdr)
-Semaphore: [![Build Status](https://semaphoreci.com/api/v1/dvolgyes/dcm2hdr/branches/master/badge.svg)](https://semaphoreci.com/dvolgyes/dcm2hdr)
-CircleCI: [![Build status](https://circleci.com/gh/dvolgyes/dcm2hdr.svg?style=svg)](https://circleci.com/gh/dvolgyes/dcm2hdr)
-AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/fcxff46jgyj32tgo?svg=true)](https://ci.appveyor.com/project/dvolgyes/dcm2hdr)
-Gitlab CI: [![gitlabci](https://gitlab.com/dvolgyes/dcm2hdr/badges/master/build.svg)](https://gitlab.com/dvolgyes/dcm2hdr/pipelines)
+Travis:[![Build Status](https://travis-ci.org/dvolgyes/dcm2hdr.svg?branch=master)](https://travis-ci.org/dvolgyes/dcm2hdr)
+Semaphore:[![Build Status](https://semaphoreci.com/api/v1/dvolgyes/dcm2hdr/branches/master/badge.svg)](https://semaphoreci.com/dvolgyes/dcm2hdr)
+CircleCI:[![Build status](https://circleci.com/gh/dvolgyes/dcm2hdr.svg?style=svg)](https://circleci.com/gh/dvolgyes/dcm2hdr)
+AppVeyor:[![Build status](https://ci.appveyor.com/api/projects/status/fcxff46jgyj32tgo?svg=true)](https://ci.appveyor.com/project/dvolgyes/dcm2hdr)
+GitlabCI:[![gitlabci](https://gitlab.com/dvolgyes/dcm2hdr/badges/master/build.svg)](https://gitlab.com/dvolgyes/dcm2hdr/pipelines)
 
+Coveralls:[![Coverage Status](https://coveralls.io/repos/github/dvolgyes/dcm2hdr/badge.svg?branch=master)](https://coveralls.io/github/dvolgyes/dcm2hdr?branch=master)
+Codecov:[![codecov](https://codecov.io/gh/dvolgyes/dcm2hdr/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/dcm2hdr)
 
-Coveralls: [![Coverage Status](https://img.shields.io/coveralls/github/dvolgyes/dcm2hdr/master.svg)](https://coveralls.io/github/dvolgyes/dcm2hdr?branch=master)
-Codecov: [![codecov](https://codecov.io/gh/dvolgyes/dcm2hdr/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/dcm2hdr)
+[![pyversion](https://img.shields.io/pypi/pyversions/dcm2hdr.svg)](https://pypi.org/project/zenodo-get/)
+![PyPI - License](https://img.shields.io/pypi/l/dcm2hdr.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
 
-This is a Python2/3 converter tool which converts DICOM files to 16 bit PNG and TIFF files.
+This is a Python2/3 converter tool () which converts DICOM files to 16 bit PNG and TIFF files.
 The aim is to make it easier editing files with regular photo editor tools, e.g. for presentation.
 The PNG files are single channel grayscale files, 
 the TIFFs are RGB encoded gray files (all channels have the same value).
@@ -19,13 +22,12 @@ Technically, there are several file formats for high bit depth images, e.g. Radi
 However, 16bit seems to be enough, and these formats are more complicated than TIFF/PNG.
 If you need Radiance HDR/OpenEXR, and 16bit png is not enough, then open a ticket, and let me know.
 
-The software is kind of trivial, you don't have to cite it, but if you want, then you could use this:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
-The latest reference could be queried from command line:
+The software is kind of trivial, you don't have to cite it, but if you want, then you could use DOI shield above,
+or query the latest reference from command line:
 ```
 dcm2hdr.py --cite
 ```
-
+The query will provide both plain text and BiBTeX information.
 
 Source code
 -----------
