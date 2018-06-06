@@ -19,14 +19,14 @@ __uri__ = 'https://github.com/dvolgyes/dcm2hdr'
 __license__ = 'AGPL v3'
 __author__ = 'David Völgyes'
 __email__ = 'david.volgyes@ieee.org'
-__doi__ = '10.5281/zenodo.1246664'
+__doi__ = '10.5281/zenodo.1246724'
 __description__ = """
 This program is meant to convert DICOM files to 16bit PNG or TIFF files.
 The primary goal is to make images stored in DICOM files processable
 with regular image processing tools, especially for tone mapping
 which is not supported by regular DICOM viewers."""
 
-__bibtex__ = """@misc{david_volgyes_2018_1246664,
+__bibtex__ = """@misc{david_volgyes_2018_1246724,
   author  = {David Völgyes},
   title   = {DCM2HDR: DICOM to HDR image conversion.},
   month   = may,
@@ -35,7 +35,7 @@ __bibtex__ = """@misc{david_volgyes_2018_1246664,
   url     = {https://doi.org/"""+__doi__+"""}
 }"""
 
-__reference__ = """David Völgyes. (2018, May 14).
+__reference__ = """David Völgyes. (2018, June 6).
 DCM2HDR: DICOM to HDR image conversion (Version v"""+__version__+""").
 Zenodo. https://doi.org/""" + __doi__
 
