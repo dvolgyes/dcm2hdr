@@ -4,11 +4,11 @@ Travis CI: [![Build Status](https://travis-ci.org/dvolgyes/dcm2hdr.svg?branch=ma
 Semaphore: [![Build Status](https://semaphoreci.com/api/v1/dvolgyes/dcm2hdr/branches/master/badge.svg)](https://semaphoreci.com/dvolgyes/dcm2hdr)
 CircleCI: [![Build status](https://circleci.com/gh/dvolgyes/dcm2hdr.svg?style=svg)](https://circleci.com/gh/dvolgyes/dcm2hdr)
 AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/fcxff46jgyj32tgo?svg=true)](https://ci.appveyor.com/project/dvolgyes/dcm2hdr)
+Gitlab CI: [![gitlabci](https://gitlab.com/dvolgyes/dcm2hdr/badges/master/build.svg)](https://gitlab.com/dvolgyes/dcm2hdr/pipelines)
 
 
 Coveralls: [![Coverage Status](https://img.shields.io/coveralls/github/dvolgyes/dcm2hdr/master.svg)](https://coveralls.io/github/dvolgyes/dcm2hdr?branch=master)
 Codecov: [![codecov](https://codecov.io/gh/dvolgyes/dcm2hdr/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/dcm2hdr)
-
 
 This is a Python2/3 converter tool which converts DICOM files to 16 bit PNG and TIFF files.
 The aim is to make it easier editing files with regular photo editor tools, e.g. for presentation.
@@ -23,10 +23,13 @@ The software is kind of trivial, you don't have to cite it, but if you want, the
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
 
 
+
 Source code
 -----------
 
-The code is hosted at Github and Gitlab too, with the exact same content.
+The code is hosted at Github and GitLab too, with the exact same content.
+However, on long term, the project will migrate to GitLab, so please, use the GitLab site:
+[https://gitlab.com/dvolgyes/dcm2hdr](https://gitlab.com/dvolgyes/dcm2hdr)
 
 
 
