@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
+
 import numpy as np
 import pydicom as dicom
 import imageio
@@ -100,7 +102,7 @@ def save_hdr(filename, img, dimension=None):
                 dimension = 0
 
         for i in range(img.shape[dimension]):
-            fname = f'{name}_{i}{ext}'
+            fname = '{}_{}{}'.format(name, i, ext)
             if dimension == 0:
                 save_hdr(fname, img[i, ...])
             if dimension == 1:
@@ -190,9 +192,10 @@ if __name__ == '__main__':
 
     if options.cite:
         print('Reference for this software:')
-        print(f'{__reference__}\n')
+        print(__reference__)
+        print()
         print('Bibtex format:')
-        print(f'{__bibtex__}')
+        print(__bibtex__)
         sys.exit(0)
 
     if len(args) == 0:
@@ -200,7 +203,7 @@ if __name__ == '__main__':
         sys.exit(0)
 
     if len(args) != 2:
-        print('Exactly two input files are needed: HDR and LDR.')
+        eprint('Exactly two input files are needed: HDR and LDR.')
         sys.exit(1)
 
     data = read_dicom(args[0], options)
