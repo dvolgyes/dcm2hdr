@@ -2,7 +2,7 @@
 set -e
 DIR=$(dirname "$0")
 
-PYTHON="python -m coverage run -a --source $DIR/../src/"
+PYTHON="python$PYVERSION -m coverage run -a --source $DIR/../src/"
 $PYTHON $DIR/../src/dcm2hdr.py
 $PYTHON $DIR/../src/dcm2hdr.py -h
 

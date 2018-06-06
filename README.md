@@ -9,6 +9,7 @@ AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/fcxff46jg
 Coveralls: [![Coverage Status](https://img.shields.io/coveralls/github/dvolgyes/dcm2hdr/master.svg)](https://coveralls.io/github/dvolgyes/dcm2hdr?branch=master)
 Codecov: [![codecov](https://codecov.io/gh/dvolgyes/dcm2hdr/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/dcm2hdr)
 
+
 This is a Python2/3 converter tool which converts DICOM files to 16 bit PNG and TIFF files.
 The aim is to make it easier editing files with regular photo editor tools, e.g. for presentation.
 The PNG files are single channel grayscale files, 
@@ -18,9 +19,15 @@ Technically, there are several file formats for high bit depth images, e.g. Radi
 However, 16bit seems to be enough, and these formats are more complicated than TIFF/PNG.
 If you need Radiance HDR/OpenEXR, and 16bit png is not enough, then open a ticket, and let me know.
 
-
 The software is kind of trivial, you don't have to cite it, but if you want, then you could use this:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
+
+
+Source code
+-----------
+
+The code is hosted at Github and Gitlab too, with the exact same content.
+
 
 
 Install

@@ -8,6 +8,7 @@ matrix:
           sudo: required
           python: 3.5
           env: PYVERSION="3"
+
         - os: linux
           dist: trusty
           sudo: required
