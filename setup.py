@@ -11,7 +11,7 @@ with open('requirements.txt', 'rt') as f:
 
 setup(
     name='dcm2hdr',
-    version='1.0.1',
+    version='1.0.2',
     description=short_description,
     long_description=short_description,
     author='David Volgyes',
