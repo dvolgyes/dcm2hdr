@@ -9,8 +9,8 @@ GitlabCI:[![gitlabci](https://gitlab.com/dvolgyes/dcm2hdr/badges/master/build.sv
 Coveralls:[![Coverage Status](https://coveralls.io/repos/github/dvolgyes/dcm2hdr/badge.svg?branch=master)](https://coveralls.io/github/dvolgyes/dcm2hdr?branch=master)
 Codecov:[![codecov](https://codecov.io/gh/dvolgyes/dcm2hdr/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/dcm2hdr)
 
-[![pyversion](https://img.shields.io/pypi/pyversions/dcm2hdr.svg)](https://pypi.org/project/zenodo-get/)
-![PyPI - License](https://img.shields.io/pypi/l/dcm2hdr.svg)
+[![pyversion](https://img.shields.io/pypi/pyversions/dcm2hdr.svg)](https://pypi.org/project/dcm2hdr/)
+[![PyPI - License](https://img.shields.io/pypi/l/dcm2hdr.svg)](https://gitlab.com/dvolgyes/dcm2hdr/raw/master/LICENSE.txt)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
 
 This is a Python2/3 converter tool () which converts DICOM files to 16 bit PNG and TIFF files.
