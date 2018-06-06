@@ -12,7 +12,7 @@ import tifffile as tiff
 import sys
 import os
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 __title__ = 'dcm2hdr'
 __summary__ = 'DICOM to 16bit PNG/TIFF converter'
 __uri__ = 'https://github.com/dvolgyes/dcm2hdr'
@@ -25,17 +25,19 @@ This program is meant to convert DICOM files to 16bit PNG or TIFF files.
 The primary goal is to make images stored in DICOM files processable
 with regular image processing tools, especially for tone mapping
 which is not supported by regular DICOM viewers."""
+
 __bibtex__ = """@misc{david_volgyes_2018_1246664,
   author  = {David Völgyes},
   title   = {DCM2HDR: DICOM to HDR image conversion.},
   month   = may,
   year    = 2018,
-  doi     = {%s},
-  url     = {https://doi.org/%s}
-}""" % (__doi__, __doi__)
+  doi     = {"""+__doi__+"""},
+  url     = {https://doi.org/"""+__doi__+"""}
+}"""
+
 __reference__ = """David Völgyes. (2018, May 14).
-DCM2HDR: DICOM to HDR image conversion. (Version v%s).
-Zenodo. http://doi.org/%s""" % (__version__, __doi__)
+DCM2HDR: DICOM to HDR image conversion (Version v"""+__version__+""").
+Zenodo. https://doi.org/""" + __doi__
 
 
 def eprint(*args, **kwargs):

@@ -21,7 +21,10 @@ If you need Radiance HDR/OpenEXR, and 16bit png is not enough, then open a ticke
 
 The software is kind of trivial, you don't have to cite it, but if you want, then you could use this:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
-
+The latest reference could be queried from command line:
+```
+dcm2hdr.py --cite
+```
 
 
 Source code
@@ -37,7 +40,11 @@ Install
 -------
 
 ```
-pip install git+https://github.com/dvolgyes/dcm2hdr
+pip install dcm2hdr
+```
+or directly from the git repository:
+```
+pip install git+https://gitlab.com/dvolgyes/dcm2hdr
 ```
 
 Afterwards, you can query the command line options:
@@ -51,8 +58,8 @@ dcm2hdr.py DICOM_INPUT_FILE  PNG_or_TIFF_OUTPUT
 ```
 
 URLs: I plan to add support to open dicom files directly from internet,
-but I do not guarantee it to work. Also, I rely on the dicom 
-package from PyPi. If the DICOM format is not supported by this lib,
+but I do not guarantee this to work. Also, I rely on the dicom 
+package from PyPi. If the DICOM format is not supported by this library,
 then I cannot do anything. (It is rare, but some scanner use compressed
 dicoms, encryption, etc. DCMTK/GDCM can handle most of the weird issues,
 so if you need to process such files, use DCMTK or GDCM to convert
@@ -67,3 +74,7 @@ dcm2hdr.py -h
 ```
 
 but if you need more, open a github ticket and explain what is missing.
+
+Issues
+------
+If you discover any issues, please open a ticket on Gitlab.
