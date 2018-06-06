@@ -12,7 +12,7 @@ the TIFFs are RGB encoded gray files (all channels have the same value).
 
 setuptools.setup(
     name='dcm2hdr',
-    version='1.0.3',
+    version='1.0.2',
     author='David Völgyes',
     author_email='david.volgyes@ieee.org',
     description=short_description,

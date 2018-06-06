@@ -12,7 +12,7 @@ import tifffile as tiff
 import sys
 import os
 
-__version__ = '1.0.3'
+__version__ = '1.0.2'
 __title__ = 'dcm2hdr'
 __summary__ = 'DICOM to 16bit PNG/TIFF converter'
 __uri__ = 'https://github.com/dvolgyes/dcm2hdr'
