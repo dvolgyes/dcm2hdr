@@ -12,7 +12,7 @@ import tifffile as tiff
 import sys
 import os
 
-__version__ = '1.0.2'
+__version__ = '1.1.0'
 __title__ = 'dcm2hdr'
 __summary__ = 'DICOM to 16bit PNG/TIFF converter'
 __uri__ = 'https://github.com/dvolgyes/dcm2hdr'
@@ -35,7 +35,7 @@ __bibtex__ = """@misc{david_volgyes_2018_1246724,
   url     = {https://doi.org/"""+__doi__+"""}
 }"""
 
-__reference__ = """David Völgyes. (2018, June 6).
+__reference__ = """David Völgyes. (2018, June 15).
 DCM2HDR: DICOM to HDR image conversion (Version v"""+__version__+""").
 Zenodo. https://doi.org/""" + __doi__
 
@@ -81,13 +81,13 @@ def read_dicom(dcmfile, options):
 
 
 @contract(img='array[NxMx...](uint8|uint16)')
-def save_hdr(filename, img, dimension=None):
+def save_hdr(filename, img, dimension=None, gray=False):
     dims = len(img.shape)
     if not (1 < dims <= 3):
         eprint('Unsupported number of dimensions')
         sys.exit(1)
 
-    if dims == 3:
+    if dims == 3:  # volumetric data is stored slice by slice
         name, ext = os.path.splitext(filename)
         if dimension is None:
             # smallest:
@@ -111,11 +111,17 @@ def save_hdr(filename, img, dimension=None):
                 save_hdr(fname, img[:, i, :])
             if dimension == 2:
                 save_hdr(fname, img[..., i])
-    else:
-        if filename.endswith('.png'):
-            imageio.imsave(filename, img)
-        elif filename.endswith('.tiff'):
+    else:  # 2D data
+        if not gray:
+            # Transform gray it to RGB
             arr = np.dstack((img, img, img))
+        else:
+            arr = img
+
+        if filename.endswith('.png'):
+            imageio.imsave(filename, arr, format='PNG-FI')
+
+        elif filename.endswith('.tiff'):
             tiff.imsave(filename, arr)
         else:
             eprint('Unsupported file format!')
@@ -190,6 +196,15 @@ if __name__ == '__main__':
                       help='which dimension should be used'
                            'for slicing (3D) (default:auto detect)')
 
+    parser.add_option('-g', '--grayscale',
+                      dest='gray',
+                      action='store_true',
+                      default=False,
+                      help='The source images (DICOM) are grayscale,'
+                      ' but most program prefer RGB files.'
+                      ' PNG/TIFF formats allow grayscale storage.'
+                      ' This flag enables grayscale storage. Default is RGB.')
+
     (options, args) = parser.parse_args()
 
     if options.cite:
@@ -209,4 +224,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     data = read_dicom(args[0], options)
-    save_hdr(args[1], data.astype(np.uint16), options.dimension)
+    save_hdr(args[1],
+             data.astype(np.uint16),
+             options.dimension,
+             gray=options.gray)
