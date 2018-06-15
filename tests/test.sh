@@ -15,8 +15,12 @@ $PYTHON $DIR/../src/dcm2hdr.py -h
 # expected failed tests
 $PYTHON $DIR/../src/dcm2hdr.py x && false || true
 $PYTHON $DIR/../src/dcm2hdr.py x x && false || true
+
 $PYTHON $DIR/../src/dcm2hdr.py x x x && false || true
 $PYTHON $DIR/../src/dcm2hdr.py https://google.com x && false || true
+
+$PYTHON $DIR/../src/dcm2hdr.py --cite
+$PYTHON $DIR/../src/dcm2hdr.py --do-not-download-plugins
 
 wget -c -i ${DIR}/example_dicom_files.url -nv
 

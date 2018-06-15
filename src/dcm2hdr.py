@@ -29,7 +29,7 @@ which is not supported by regular DICOM viewers."""
 __bibtex__ = """@misc{david_volgyes_2018_1246724,
   author  = {David Völgyes},
   title   = {DCM2HDR: DICOM to HDR image conversion.},
-  month   = may,
+  month   = june,
   year    = 2018,
   doi     = {"""+__doi__+"""},
   url     = {https://doi.org/"""+__doi__+"""}
@@ -205,6 +205,13 @@ if __name__ == '__main__':
                       ' PNG/TIFF formats allow grayscale storage.'
                       ' This flag enables grayscale storage. Default is RGB.')
 
+    parser.add_option('--do-not-download-plugins',
+                      dest='download',
+                      action='store_false',
+                      default=True,
+                      help='ImageIO needs plugins, they will be downloaded'
+                      ' automatically, except if this flag is enabled.)')
+
     (options, args) = parser.parse_args()
 
     if options.cite:
@@ -214,6 +221,9 @@ if __name__ == '__main__':
         print('Bibtex format:')
         print(__bibtex__)
         sys.exit(0)
+
+    if options.download:
+        imageio.plugins.freeimage.download()
 
     if len(args) == 0:
         parser.print_help()
