@@ -80,4 +80,4 @@ but if you need more, open a github ticket and explain what is missing.
 
 Issues
 ------
-If you discover any issues, please open a ticket on Gitlab.
+If you discover any issues, please open a ticket on Github.
