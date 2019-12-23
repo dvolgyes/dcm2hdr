@@ -22,12 +22,12 @@ setuptools.setup(
     url='https://gitlab.com/dvolgyes/dcm2hdr',
     license='AGPL3',
     scripts=['src/dcm2hdr.py'],
-    python_requires='>=2.7',
+    python_requires='>=3.6',
     setup_requires=[],
     install_requires=['numpy>=1.13.3,<2.0',
                       'pycontracts>=1.8.3,<2.0',
                       'imageio>=2.3.0,<3.0',
-                      'tifffile>=0.14.0,<1.0'
+                      'tifffile>=0.14.0'
                       'pydicom>=1.0,<2.0'
                       ],
     keywords=['DICOM', 'HDR', 'TIFF', 'PNG'],
