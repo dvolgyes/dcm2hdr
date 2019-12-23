@@ -13,9 +13,9 @@ environment:
           NUMPY_VERSION: "stable"
         - PYTHON_VERSION: "3.7"
           NUMPY_VERSION: "stable"
-        - PYTHON_VERSION: "3.8"
-          NUMPY_VERSION: "stable"
-
+#        - PYTHON_VERSION: "3.8"
+#          NUMPY_VERSION: "stable"
+# currently numpy is not available for 3.8
 
 matrix:
     fast_finish: true
