@@ -4,7 +4,6 @@ Travis:[![Build Status](https://travis-ci.org/dvolgyes/dcm2hdr.svg?branch=master
 Semaphore:[![Build Status](https://semaphoreci.com/api/v1/dvolgyes/dcm2hdr/branches/master/badge.svg)](https://semaphoreci.com/dvolgyes/dcm2hdr)
 CircleCI:[![Build status](https://circleci.com/gh/dvolgyes/dcm2hdr.svg?style=svg)](https://circleci.com/gh/dvolgyes/dcm2hdr)
 AppVeyor:[![Build status](https://ci.appveyor.com/api/projects/status/fcxff46jgyj32tgo?svg=true)](https://ci.appveyor.com/project/dvolgyes/dcm2hdr)
-GitlabCI:[![gitlabci](https://gitlab.com/dvolgyes/dcm2hdr/badges/master/build.svg)](https://gitlab.com/dvolgyes/dcm2hdr/pipelines)
 
 Coveralls:[![Coverage Status](https://coveralls.io/repos/github/dvolgyes/dcm2hdr/badge.svg?branch=master)](https://coveralls.io/github/dvolgyes/dcm2hdr?branch=master)
 Codecov:[![codecov](https://codecov.io/gh/dvolgyes/dcm2hdr/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/dcm2hdr)
@@ -15,7 +14,7 @@ Snyk:[![Known Vulnerabilities](https://snyk.io/test/github/dvolgyes/dcm2hdr/badg
 [![PyPI - License](https://img.shields.io/pypi/l/dcm2hdr.svg)](https://gitlab.com/dvolgyes/dcm2hdr/raw/master/LICENSE.txt)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1246664.svg)](https://doi.org/10.5281/zenodo.1246664)
 
-This is a Python2/3 converter tool () which converts DICOM files to 16 bit PNG and TIFF files.
+This is a Python3 converter tool which converts DICOM files to 16 bit PNG and TIFF files.
 The aim is to make it easier editing files with regular photo editor tools, e.g. for presentation.
 The PNG files are single channel grayscale files, 
 the TIFFs are RGB encoded gray files (all channels have the same value).

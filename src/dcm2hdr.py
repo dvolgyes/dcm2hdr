@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-from __future__ import print_function
 
 import numpy as np
 import pydicom as dicom
@@ -104,7 +102,7 @@ def save_hdr(filename, img, dimension=None, gray=False):
                 dimension = 0
 
         for i in range(img.shape[dimension]):
-            fname = '{}_{}{}'.format(name, i, ext)
+            fname = f'{name}_{i}{ext}'
             if dimension == 0:
                 save_hdr(fname, img[i, ...])
             if dimension == 1:
