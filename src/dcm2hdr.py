@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
@@ -12,7 +12,7 @@ import tifffile as tiff
 import sys
 import os
 
-__version__ = '1.1.0'
+__version__ = '1.1.1'
 __title__ = 'dcm2hdr'
 __summary__ = 'DICOM to 16bit PNG/TIFF converter'
 __uri__ = 'https://github.com/dvolgyes/dcm2hdr'
