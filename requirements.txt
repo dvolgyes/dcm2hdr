@@ -3,3 +3,4 @@ pycontracts>=1.8.3,<2.0
 imageio>=2.3.0,<3.0
 tifffile>=0.14.0
 pydicom>=1.0,<2.0
+pillow>=10.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
